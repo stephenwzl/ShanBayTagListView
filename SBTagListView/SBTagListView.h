@@ -43,5 +43,5 @@ typedef enum :NSInteger{
 - (instancetype)initWithWidth:(CGFloat)width contentArray:(NSMutableArray *)array;
 
 - (SBTag *)desequeseTagAtIndex:(NSUInteger)index;
-
+- (void)removeTagAtIndex:(NSUInteger)index;
 @end
