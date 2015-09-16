@@ -413,7 +413,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SBTagListView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.shanbay.zhilong.SBTagListView;
+				PRODUCT_BUNDLE_IDENTIFIER = com.shanbay.zhilong.ShanBayTagListView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -424,7 +424,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SBTagListView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.shanbay.zhilong.SBTagListView;
+				PRODUCT_BUNDLE_IDENTIFIER = com.shanbay.zhilong.ShanBayTagListView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -496,6 +496,7 @@
 				53B9E3571BA9789E002116AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		53B9E3581BA9789E002116AE /* Build configuration list for PBXNativeTarget "SBTagListViewTests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +505,7 @@
 				53B9E35A1BA9789E002116AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		53B9E35B1BA9789E002116AE /* Build configuration list for PBXNativeTarget "SBTagListViewUITests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +514,7 @@
 				53B9E35D1BA9789E002116AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
