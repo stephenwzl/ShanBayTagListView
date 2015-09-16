@@ -15,6 +15,7 @@
 		53B9E33B1BA9789E002116AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53B9E3391BA9789E002116AE /* LaunchScreen.storyboard */; };
 		53B9E3461BA9789E002116AE /* SBTagListViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 53B9E3451BA9789E002116AE /* SBTagListViewTests.m */; };
 		53B9E3511BA9789E002116AE /* SBTagListViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 53B9E3501BA9789E002116AE /* SBTagListViewUITests.m */; };
+		53B9E3601BA97A37002116AE /* SBTagListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 53B9E35F1BA97A36002116AE /* SBTagListView.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		53B9E34C1BA9789E002116AE /* SBTagListViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SBTagListViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		53B9E3501BA9789E002116AE /* SBTagListViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SBTagListViewUITests.m; sourceTree = "<group>"; };
 		53B9E3521BA9789E002116AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		53B9E35E1BA97A36002116AE /* SBTagListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTagListView.h; sourceTree = "<group>"; };
+		53B9E35F1BA97A36002116AE /* SBTagListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBTagListView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +113,7 @@
 				53B9E3391BA9789E002116AE /* LaunchScreen.storyboard */,
 				53B9E33C1BA9789E002116AE /* Info.plist */,
 				53B9E32B1BA9789E002116AE /* Supporting Files */,
+				53B9E3611BA97A3B002116AE /* Classes */,
 			);
 			path = SBTagListView;
 			sourceTree = "<group>";
@@ -138,6 +142,15 @@
 				53B9E3521BA9789E002116AE /* Info.plist */,
 			);
 			path = SBTagListViewUITests;
+			sourceTree = "<group>";
+		};
+		53B9E3611BA97A3B002116AE /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				53B9E35E1BA97A36002116AE /* SBTagListView.h */,
+				53B9E35F1BA97A36002116AE /* SBTagListView.m */,
+			);
+			name = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,6 +285,7 @@
 			files = (
 				53B9E3331BA9789E002116AE /* ViewController.m in Sources */,
 				53B9E3301BA9789E002116AE /* AppDelegate.m in Sources */,
+				53B9E3601BA97A37002116AE /* SBTagListView.m in Sources */,
 				53B9E32D1BA9789E002116AE /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
