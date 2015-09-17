@@ -44,4 +44,5 @@ typedef enum :NSInteger{
 
 - (SBTag *)desequeseTagAtIndex:(NSUInteger)index;
 - (void)removeTagAtIndex:(NSUInteger)index;
+- (void)resizeToWidth:(CGFloat)width;
 @end

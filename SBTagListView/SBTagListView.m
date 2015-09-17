@@ -78,7 +78,6 @@
             currentTotalWidth = 0;
         }
     }
-    NSLog(@"lines: %lu",(unsigned long)totalLines);
     return totalLines;
 }
 
@@ -86,6 +85,30 @@
     [self.tagsArray removeObject:[self desequeseTagAtIndex:index]];
     [self reloadTags];
 }
+
+
+- (void)resizeToWidth:(CGFloat)width {
+    //已经是这么宽
+    if (self.frame.size.width == width) {
+        return;
+    }
+    //宽度小于一个tag，不能这么玩
+    for (SBTag * tag in self.tagsArray) {
+        if (width <= tag.frame.size.width) {
+            NSLog(@"can not resize to the width smaller than a tag");
+            return;
+        }
+    }
+    //高度重新计算,比现在大要show出来
+    self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, width, self.frame.size.height);
+    CGFloat height = [self generateLinesOfTags] * 39;
+    if (height < self.frame.size.height) {
+        height = self.frame.size.height;
+    }
+    self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, width, height);
+    [self reloadTags];
+}
+
 #pragma mark data
 - (NSMutableArray *)generateTagsByStrings:(NSMutableArray *)array {
     NSMutableArray *resultArray = [[NSMutableArray alloc] initWithCapacity:array.count];
@@ -110,7 +133,6 @@
 
 #pragma SEL
 - (void)didTappedTag:(SBTag *)sender {
-    NSLog(@"%ld",sender.index);
     if ([self.delegate respondsToSelector:@selector(didSelectTagAtIndex:)]) {
         [self.delegate didSelectTagAtIndex:sender.index];
     }
@@ -141,7 +163,7 @@
     CGContextRef context = UIGraphicsGetCurrentContext();
     
     //// Color Declarations
-    UIColor* color = [UIColor colorWithRed: 0.557 green: 0.557 blue: 0.557 alpha: 1];
+    UIColor* color = [UIColor colorWithRed: 0.96 green: 0.96 blue: 0.96 alpha: 1];
     
     //// Rectangle Drawing
     UIBezierPath* rectanglePath = [UIBezierPath bezierPathWithRoundedRect: rect cornerRadius: 4];
@@ -156,7 +178,7 @@
         NSMutableParagraphStyle* textStyle = NSMutableParagraphStyle.defaultParagraphStyle.mutableCopy;
         textStyle.alignment = NSTextAlignmentLeft;
         
-        NSDictionary* textFontAttributes = @{NSFontAttributeName: [UIFont systemFontOfSize: UIFont.labelFontSize], NSForegroundColorAttributeName: UIColor.blackColor, NSParagraphStyleAttributeName: textStyle};
+        NSDictionary* textFontAttributes = @{NSFontAttributeName: [UIFont systemFontOfSize: UIFont.labelFontSize], NSForegroundColorAttributeName: [UIColor colorWithRed:0.56 green:0.56 blue:0.56 alpha:1.0], NSParagraphStyleAttributeName: textStyle};
         
         CGContextSaveGState(context);
         CGContextClipToRect(context, textRect);

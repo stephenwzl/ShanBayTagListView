@@ -21,6 +21,8 @@
     self.list.center = self.view.center;
     [self.view addSubview:self.list];
     self.list.delegate = self;
+    self.list.layer.borderColor = [UIColor blackColor].CGColor;
+    self.list.layer.borderWidth = 1;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -29,7 +31,12 @@
 }
 
 - (void)didSelectTagAtIndex:(NSUInteger)index {
-    [self.list removeTagAtIndex:index];
+//    [self.list removeTagAtIndex:index];
+    SBTag *tag = [self.list desequeseTagAtIndex:index];
+    [tag setTagType:SBTagTypeError];
+}
+- (IBAction)resizeAction:(id)sender {
+    [self.list resizeToWidth:180];
 }
 
 @end
