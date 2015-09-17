@@ -16,7 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSMutableArray *array = [NSMutableArray arrayWithArray:@[@"ehllo",@"asdc",@"asdhakdaskd",@"gsdfvfsdf",@"asdcjdf",@"asdclkja"]];
+    NSMutableArray *array = [NSMutableArray arrayWithArray:@[@"This",@"is",@"SBTagListView,",@"use",@"it",@"and",@"enjoy",@"your",@"self"]];
     self.list = [[SBTagListView alloc] initWithWidth:300 contentArray:array];
     self.list.center = self.view.center;
     [self.view addSubview:self.list];
